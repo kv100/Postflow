@@ -2,6 +2,8 @@
 
 **Self-hosted social media manager for Threads & Instagram. Free, open-source, with AI-powered replies.**
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkv100%2FPostflow&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,SUPABASE_SERVICE_ROLE_KEY,THREADS_USER_ID,THREADS_ACCESS_TOKEN,THREADS_APP_ID,THREADS_APP_SECRET,CRON_SECRET&envDescription=See%20setup%20guides%20in%20docs%2F%20folder&envLink=https%3A%2F%2Fgithub.com%2Fkv100%2FPostflow%2Fblob%2Fmain%2F.env.example&project-name=postflow)
+
 PostFlow is a Buffer/Hootsuite alternative you own. Schedule posts, track analytics, and manage replies — all from your own dashboard, at zero cost.
 
 ## Why PostFlow?
@@ -51,15 +53,26 @@ PostFlow is a Buffer/Hootsuite alternative you own. Schedule posts, track analyt
 
 ## Quick Start
 
-### 1. Clone & install
+### Option A: One-click deploy (fastest)
+
+1. Set up [Supabase](docs/setup-supabase.md) and [Threads API](docs/setup-meta-threads.md) first
+2. Click the button:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkv100%2FPostflow&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,SUPABASE_SERVICE_ROLE_KEY,THREADS_USER_ID,THREADS_ACCESS_TOKEN,THREADS_APP_ID,THREADS_APP_SECRET,CRON_SECRET&envDescription=See%20setup%20guides%20in%20docs%2F%20folder&envLink=https%3A%2F%2Fgithub.com%2Fkv100%2FPostflow%2Fblob%2Fmain%2F.env.example&project-name=postflow)
+
+3. Fill in your env vars when prompted — done!
+
+### Option B: Manual setup
+
+#### 1. Clone & install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/postflow.git
-cd postflow
+git clone https://github.com/kv100/Postflow.git
+cd Postflow
 npm install
 ```
 
-### 2. Set up services (one-time, ~30 min)
+#### 2. Set up services (one-time, ~30 min)
 
 Follow these guides in order:
 
@@ -68,18 +81,18 @@ Follow these guides in order:
 3. **[Instagram Setup](docs/setup-meta-instagram.md)** (~15 min, optional) — posting to Instagram
 4. **[Vercel Deployment](docs/setup-vercel.md)** (~5 min) — hosting
 
-### 3. Configure environment
+#### 3. Configure environment
 
 ```bash
 cp .env.example .env.local
 # Edit .env.local with your keys from the setup guides
 ```
 
-### 4. Set up database
+#### 4. Set up database
 
 Run `setup.sql` in your Supabase SQL Editor (see [Supabase guide](docs/setup-supabase.md)).
 
-### 5. Run locally
+#### 5. Run locally
 
 ```bash
 npm run dev
@@ -87,7 +100,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-### 6. Deploy to Vercel
+#### 6. Deploy to Vercel
 
 ```bash
 npx vercel
