@@ -108,6 +108,20 @@ npx vercel
 
 Or push to GitHub and import in Vercel Dashboard.
 
+### Option C: Docker
+
+```bash
+git clone https://github.com/kv100/Postflow.git
+cd Postflow
+cp .env.example .env.local
+# Edit .env.local with your keys (see setup guides in docs/)
+docker compose up -d
+```
+
+Open [http://localhost:3000](http://localhost:3000). That's it.
+
+> Works on any VPS (Hetzner, DigitalOcean, etc.) — just install Docker and run.
+
 ## Project Structure
 
 ```
